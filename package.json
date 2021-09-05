@@ -4,7 +4,13 @@
     "gulp": "^3.8.8"
   },
   "dependencies": {
-    "laravel-elixir": "^2.0.0",
-    "bootstrap-sass": "^3.0.0"
-  }
+    "laravel-elixir": "^3.0.0",
+    "bootstrap-sass": "^3.0.0",
+    "@snyk/protect": "latest"
+  },
+  "scripts": {
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
